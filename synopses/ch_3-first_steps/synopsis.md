@@ -1,7 +1,7 @@
 First steps
 ===========
 
-to run a new container:
+To run a new container:
 ```sh
 $ docker run --hostname <hostname> --name <name>
              --interactive --tty <distr> <command>
@@ -19,11 +19,12 @@ where
 - <command> - a command to be launched inside a container  
 (all parameters must be specified without angle brackets),
 "-- interactive" means running an interactive session,
-"--tty" means running a session with a tty atached
+"--tty" means running a session with a tty atached.
 
-a concrete example is below
+A concrete example is below:
 ```sh
-$ docker run --hostname CONTAINER --name my_name --interactive --tty debian /bin/bash
+$ docker run --hostname CONTAINER --name my_name 
+             --interactive --tty debian /bin/bash
 ```
 
 Other usefull commands:
@@ -44,14 +45,14 @@ Other usefull commands:
 - to stop a container:  
   `docker stop <container-name>`
 
-to remove automatically a container after its execution
+To remove automatically a container after its execution
 use the "run" command with the "--rm" flag.
 
-to commit an image:
+To commit an image:
 ```sh
 $ docker commit <container-name> <repository-name>/<image-name>
 ```
-for example:
+For example:
 ```sh
 $ docker commit cowsay test/cowsayimage
 ```
